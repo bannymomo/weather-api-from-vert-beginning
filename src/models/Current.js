@@ -5,6 +5,7 @@ function currentData(rawdata) {
     minFahrenheit: calculateFahrenheit(rawdata.main.temp_min),
     maxFahrenheit: calculateFahrenheit(rawdata.main.temp_max),
     humidity: rawdata.main.humidity,
+    weatherDiscription: rawdata.weather[0].main,
     windSpeed: rawdata.wind.speed,
     windDirection: calculateWindDirection(rawdata.wind.deg)
   };
